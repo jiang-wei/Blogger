@@ -198,6 +198,15 @@ E. Use SSL termination on the load balancer, an SSL listener on the Amazon EC2 i
 
 Q9
 
+You have a large multi-tier architecture that serves public-facing Web traffic through a load balancer and is backed by a Web tier that is contained within an Amazon EC2 auto scaling group. During a peak in traffic, you discover that your Web tier is adding new instances disproportionately compared to the amount of incoming traffic and the auto scaling policy that was set up. What should you do in order to stop the auto scaling group from scaling incorrectly in response to incoming traffic?
+
+A. Using CloudWatch and the InstanceBootTime metric, increase the PauseTime and CoolDown property on the auto scaling group to be over the value of the metric.
+
+B. Using a custom CloudWatch metric, insert the elapsed time since the instance launch to the time the instance responds to an Elastic Load Balancing health check, and periodically adjust the PauseTime and the CoolDown property of the auto scaling group to be over the value of the metric.
+
+C. Using a custom CloudWatch metric, insert the elapsed time since the instance launch to the time the instance reponds to an Elastic Load Balancing health check, and periodically adjust the PauseTime of the UPdatePolicy and reduce the ScalingAdjustment policy by 50%.
+
+D. Using a third-party configuration management tool and the AWS SDK, suspend all ScheduledActions of the auto scaling group until after the traffic peak, and then resume all ScheduledActions.
 
 QX
 
